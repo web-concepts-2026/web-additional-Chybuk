@@ -1,0 +1,53 @@
+body {
+  background: #1e1e2e;
+  color: #e0e0e0;
+  font-family: Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+}
+
+.card {
+  background: #2a2a3d;
+  padding: 30px 40px;
+  border-radius: 12px;
+  width: 400px;
+}
+
+h1 {
+  margin-top: 0;
+  color: #ffb86c;
+}
+
+h3 {
+  color: #8be9fd;
+  margin-bottom: 8px;
+}
+
+.link {
+  display: block;
+  color: #50fa7b;
+  margin-bottom: 6px;
+}
+
+input {
+  padding: 6px;
+  border-radius: 6px;
+  border: none;
+}
+
+button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #ff79c6;
+  color: #1e1e2e;
+  cursor: pointer;
+}
+
+pre {
+  background: #1e1e2e;
+  padding: 10px;
+  border-radius: 6px;
+  min-height: 20px;
+}
