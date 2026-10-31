@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Socket Server</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>Socket Server</h1>
+
+    <h3>GET</h3>
+    <a class="link" href="/page?id=5">Open page 5</a>
+    <a class="link" href="/items">Show all items</a>
+
+    <h3>POST</h3>
+    <form id="itemForm">
+      <input id="itemName" placeholder="Type something">
+      <button>Save</button>
+    </form>
+    <pre id="output"></pre>
+  </div>
+
+  <script>
+    document.getElementById("itemForm").onsubmit = async function (event) {
+      event.preventDefault();
+      let name = document.getElementById("itemName").value;
+      let res = await fetch("/items", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: name })
+      });
+      document.getElementById("output").textContent = await res.text();
+    };
+  </script>
+</body>
+</html>
